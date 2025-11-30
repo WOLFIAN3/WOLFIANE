@@ -1,87 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background: #0d6efd;
-      color: white;
-      padding: 20px 40px;
-      text-align: center;
-    }
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      background: white;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #555;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socialprodz - Digital Store</title>
+<style>
+body{font-family:sans-serif;background:#f7f7f7;margin:0;padding:0;color:#222;transition:0.3s;}
+header{text-align:center;padding:60px 20px;}
+h1{font-size:32px;margin-bottom:10px;}
+p{font-size:18px;max-width:600px;margin:auto;}
+.section{padding:40px 20px;text-align:center;}
+.btn{display:inline-block;padding:14px 24px;margin:10px;background:#4a6cff;color:#fff;text-decoration:none;border-radius:8px;font-size:18px;}
+.lang-btn{position:fixed;top:20px;right:20px;background:#fff;border:1px solid #ccc;padding:8px 14px;border-radius:6px;cursor:pointer;}
+footer{text-align:center;padding:20px;font-size:14px;color:#555;}
+</style>
 </head>
 <body>
-  <header>
-    <h2>Your Brand Name</h2>
-  </header>
 
-  <div class="hero">
-    <h1>Welcome to Your Website</h1>
-    <p>Your slogan or short mission statement goes here.</p>
-  </div>
+<button class="lang-btn" onclick="toggleLang()">AR / EN</button>
 
-  <div class="section">
-    <div class="card">
-      <h3>About Us</h3>
-      <p>Write a short description about your brand, business, or services.</p>
-    </div>
+<header>
+<h1 id="title">Socialprodz - Digital Store</h1>
+<p id="subtitle">Everything you need to start your digital business — templates, prompts, eBooks, and much more.</p>
+</header>
 
-    <div class="card">
-      <h3>Services</h3>
-      <p>• Service 1<br>• Service 2<br>• Service 3</p>
-    </div>
+<div class="section">
+<h2 id="productsTitle">Our Products</h2>
+<a class="btn" id="shopifyBtn" href="https://payhip.com/b/XxJF1" target="_blank">Shopify Themes +250</a>
+<a class="btn" id="promptBtn" href="https://payhip.com/b/ufzvS" target="_blank">ChatGPT Prompts +170</a>
+</div>
 
-    <div class="card">
-      <h3>Contact</h3>
-      <p>Email: example@yourdomain.com<br>Phone: +000 000 0000</p>
-    </div>
-  </div>
+<footer id="footer">© 2025 Socialprodz</footer>
 
-  <footer>
-    © 2025 Your Brand — All rights reserved
-  </footer>
+<script>
+let ar = false;
+
+function toggleLang(){
+    ar = !ar;
+    if(ar){
+        document.body.dir="rtl";
+        document.body.lang="ar";
+        document.getElementById("title").innerText="Socialprodz - متجر المنتجات الرقمية";
+        document.getElementById("subtitle").innerText="كل ما تحتاجه لبدء مشروعك الرقمي — قوالب، برومبات، كتب والمزيد.";
+        document.getElementById("productsTitle").innerText="منتجاتنا";
+        document.getElementById("shopifyBtn").innerText="قوالب Shopify +250";
+        document.getElementById("promptBtn").innerText="برومبات ChatGPT +170";
+        document.getElementById("footer").innerText="© 2025 Socialprodz";
+    } else {
+        document.body.dir="ltr";
+        document.body.lang="en";
+        document.getElementById("title").innerText="Socialprodz - Digital Store";
+        document.getElementById("subtitle").innerText="Everything you need to start your digital business — templates, prompts, eBooks, and much more.";
+        document.getElementById("productsTitle").innerText="Our Products";
+        document.getElementById("shopifyBtn").innerText="Shopify Themes +250";
+        document.getElementById("promptBtn").innerText="ChatGPT Prompts +170";
+        document.getElementById("footer").innerText="© 2025 Socialprodz";
+    }
+}
+</script>
+
 </body>
 </html>
