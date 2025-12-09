@@ -1,63 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Socialprodz - Digital Store</title>
-<style>
-body{font-family:sans-serif;background:#f7f7f7;margin:0;padding:0;color:#222;transition:0.3s;}
-header{text-align:center;padding:60px 20px;}
-h1{font-size:32px;margin-bottom:10px;}
-p{font-size:18px;max-width:600px;margin:auto;}
-.section{padding:40px 20px;text-align:center;}
-.btn{display:inline-block;padding:14px 24px;margin:10px;background:#4a6cff;color:#fff;text-decoration:none;border-radius:8px;font-size:18px;}
-.lang-btn{position:fixed;top:20px;right:20px;background:#fff;border:1px solid #ccc;padding:8px 14px;border-radius:6px;cursor:pointer;}
-footer{text-align:center;padding:20px;font-size:14px;color:#555;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Brand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #1976d2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #ddd;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-<button class="lang-btn" onclick="toggleLang()">AR / EN</button>
+<header>Your Brand Name</header>
 
-<header>
-<h1 id="title">Socialprodz - Digital Store</h1>
-<p id="subtitle">Everything you need to start your digital business — templates, prompts, eBooks, and much more.</p>
-</header>
+<div class="container">
 
-<div class="section">
-<h2 id="productsTitle">Our Products</h2>
-<a class="btn" id="shopifyBtn" href="https://payhip.com/b/XxJF1" target="_blank">Shopify Themes +250</a>
-<a class="btn" id="promptBtn" href="https://payhip.com/b/ufzvS" target="_blank">ChatGPT Prompts +170</a>
+    <div class="card">
+        <h2>Welcome to Your Website</h2>
+        <p>Your slogan or short mission statement goes here.</p>
+    </div>
+
+    <div class="card">
+        <h3>About Us</h3>
+        <p>Write a short description about your brand, business, or services.</p>
+    </div>
+
+    <div class="card">
+        <h3>Services</h3>
+        <ul>
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Contact</h3>
+        <p>Email: example@yourdomain.com</p>
+        <p>Phone: +000 000 0000</p>
+    </div>
+
 </div>
 
-<footer id="footer">© 2025 Socialprodz</footer>
-
-<script>
-let ar = false;
-
-function toggleLang(){
-    ar = !ar;
-    if(ar){
-        document.body.dir="rtl";
-        document.body.lang="ar";
-        document.getElementById("title").innerText="Socialprodz - متجر المنتجات الرقمية";
-        document.getElementById("subtitle").innerText="كل ما تحتاجه لبدء مشروعك الرقمي — قوالب، برومبات، كتب والمزيد.";
-        document.getElementById("productsTitle").innerText="منتجاتنا";
-        document.getElementById("shopifyBtn").innerText="قوالب Shopify +250";
-        document.getElementById("promptBtn").innerText="برومبات ChatGPT +170";
-        document.getElementById("footer").innerText="© 2025 Socialprodz";
-    } else {
-        document.body.dir="ltr";
-        document.body.lang="en";
-        document.getElementById("title").innerText="Socialprodz - Digital Store";
-        document.getElementById("subtitle").innerText="Everything you need to start your digital business — templates, prompts, eBooks, and much more.";
-        document.getElementById("productsTitle").innerText="Our Products";
-        document.getElementById("shopifyBtn").innerText="Shopify Themes +250";
-        document.getElementById("promptBtn").innerText="ChatGPT Prompts +170";
-        document.getElementById("footer").innerText="© 2025 Socialprodz";
-    }
-}
-</script>
+<footer>© 2025 Your Brand — All rights reserved</footer>
 
 </body>
 </html>
