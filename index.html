@@ -1,78 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Brand</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25-in-1 eCom Business Starter Bundle</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-            color: #333;
+            background: #f5f7fa;
+            color: #222;
         }
+
         header {
-            background: #1976d2;
-            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
+            background: white;
+            border-bottom: 1px solid #ddd;
         }
+
+        .lang-btn {
+            padding: 8px 15px;
+            background: #0077ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         .container {
             max-width: 900px;
             margin: 40px auto;
-        }
-        .card {
-            background: white;
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
-        footer {
-            background: #ddd;
+
+        h1 {
             text-align: center;
-            padding: 15px;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .desc {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .payhip-box {
             margin-top: 40px;
+            border: 2px solid #0077ff;
+            border-radius: 12px;
+            padding: 20px;
+            background: #f0f6ff;
         }
     </style>
+
+    <script>
+        function toggleLanguage() {
+            const en = document.getElementById("en");
+            const ar = document.getElementById("ar");
+
+            if (en.style.display === "none") {
+                en.style.display = "block";
+                ar.style.display = "none";
+            } else {
+                en.style.display = "none";
+                ar.style.display = "block";
+            }
+        }
+    </script>
+
 </head>
+
 <body>
 
-<header>Your Brand Name</header>
+<header>
+    <h2>WOLF eCom</h2>
+    <button class="lang-btn" onclick="toggleLanguage()">EN / AR</button>
+</header>
 
 <div class="container">
 
-    <div class="card">
-        <h2>Welcome to Your Website</h2>
-        <p>Your slogan or short mission statement goes here.</p>
+    <!-- 🔵 English Section -->
+    <div id="en">
+        <h1>25-in-1 eCom Business Starter Bundle (AI Prompts + Shopify Theme + 500 Descriptions)</h1>
+        <p class="desc">
+            Your All-In-One Toolkit to Build, Grow & Automate Your Online Business.<br><br>
+            Are you launching a Shopify store? Creating digital products?<br>
+            Or trying to build a new income stream online?<br><br>
+            This bundle gives you everything you need to launch FAST — even if you’re starting from zero.
+        </p>
+
+        <div class="payhip-box">
+            <div class="payhip-embed-page" data-key="gMQsE"></div>
+            <script src="https://payhip.com/embed-page.js"></script>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>About Us</h3>
-        <p>Write a short description about your brand, business, or services.</p>
-    </div>
+    <!-- 🔵 Arabic Section -->
+    <div id="ar" style="display:none; direction: rtl; text-align: right;">
+        <h1>باقة 25 أداة لبداية مشروع eCom (برومبتات + ثيم شوبيفاي + 500 وصف)</h1>
+        <p class="desc">
+            مجموعة شاملة لإطلاق وتطوير وأتمتة عملك الإلكتروني.<br><br>
+            هل تطلق متجر شوبيفاي؟ أو تنشئ منتجات رقمية؟<br>
+            أو تريد بدء مصدر دخل جديد بسرعة؟<br><br>
+            هذه الباقة تمنحك كل ما تحتاجه للانطلاق فورًا — حتى لو كنت مبتدئًا.
+        </p>
 
-    <div class="card">
-        <h3>Services</h3>
-        <ul>
-            <li>Service 1</li>
-            <li>Service 2</li>
-            <li>Service 3</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>Contact</h3>
-        <p>Email: example@yourdomain.com</p>
-        <p>Phone: +000 000 0000</p>
+        <div class="payhip-box">
+            <div class="payhip-embed-page" data-key="gMQsE"></div>
+            <script src="https://payhip.com/embed-page.js"></script>
+        </div>
     </div>
 
 </div>
-
-<footer>© 2025 Your Brand — All rights reserved</footer>
 
 </body>
 </html>
